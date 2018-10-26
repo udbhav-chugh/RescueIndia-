@@ -10,3 +10,12 @@ With no availability of internet, we plan on developing a local area network so 
 During the times of disaster, we will maintain a check on the food supplies, medicines, efficiency of the evacuation plan and emergency aid supplies. The model will also provide a basic translator to help translate common words of common Indian languages to Hindi/English to ease communication with the rescue team.
 
 Finally, we will have a forum where people can donate to the affected people and their loss of property. We will also have a forum to conduct workshops in all parts of country to spread awareness about such disasters in which again people willing to make a difference can volunteer and contribute.
+
+
+To run the project
+1) type the command : bash inital.sh
+  (this command needs to be run only once)
+
+2) to deploy the website, type: bash run_dev_server.sh
+
+to open website link, go to the url: http://localhost:8002
