@@ -1,7 +1,3 @@
-postgres=# CREATE DATABASE rescuekerala;
-    CREATE DATABASE
-    postgres=# CREATE USER rescueuser WITH PASSWORD 'password';
-    CREATE ROLE
-    postgres=# GRANT ALL PRIVILEGES ON DATABASE rescuekerala TO rescueuser;
-    GRANT
-    postgres=# \q
+CREATE DATABASE test;
+CREATE USER helpinghand WITH PASSWORD 'password';
+GRANT ALL PRIVILEGES ON DATABASE rescuekerala TO rescueuser;
