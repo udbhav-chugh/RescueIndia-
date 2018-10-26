@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% load bootstrap3 %}
+
+<div class="container text-center">
+    <h1 class="main-logo">HELP<span style="font-weight: normal;"> at </span>HAND</h1>
+    <br/>
+    <img src="{% static 'images/helpathand.jpg' %}" height="500" width="600" align="middle">
+    <h2 class="main-logo">VISION</h2>
+    <p style="margin-bottom:20px; color:white; font-size: 300%;"  >
+        <i>An initiative by students of IIT Guwahati</i><br>
+        To bring together public, government authorities, and volunteers<br/>to prepare better for upcoming disasters and effectively help the sufferers.<br/>
+  </p>
+  <a href="{%url 'requestview' %}" class="home-button card" role="button">
+        <span class="text">
+            Request<br/>for help<br/>
+        </span>
+    </a>
+    <a href="{%url 'report_find_person' %}" class="home-button card" role="button">
+        <span class="text">
+            Report Missing Person/<br />Find Person<br/>
+        </span>
+    </a>
+    <a href="{%url 'relief_camps' %}" class="home-button card" role="button">
+        <span class="text">
+          Relief Camps Information<br/>
+        </span>
+    </a>
+    <a href="{%url 'reg_contribview' %}" class="home-button card" role="button">
+        <span class="text">
+            Click To <br>Contribute<br/>
+        </span>
+    </a>
+    <a href="{%url 'ngovolunteerview' %}" class="home-button card" role="button">
+        <span class="text">
+            Register <br>as Volunteer &amp; NGO/COMPANY <br/>
+        </span>
+    </a>
+    <a href="{% url 'contactus' %}" class="home-button card" role="button">
+        <span class="text">
+            Contact <br>Information<br/>
+        </span>
+    </a>
+    <a href="{%url 'requestlistview' %}?district=" class="home-button card" role="button">
+      <span class="text">
+        View Registered Requests<br/>
+      </span>
+    </a>
+    <a href="{%url 'Announcements' %}" class="home-button card" role="button">
+        <span class="text">
+        Important Announcements<br/>
+        </span>
+    </a>
+</div>
+{% endblock %}

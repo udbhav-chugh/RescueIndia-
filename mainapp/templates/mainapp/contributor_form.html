@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+<h1 class="text-center">To Contribute Materials/Services</h1>
+  <form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+  <button type="submit" class="btn btn-primary">
+  {% bootstrap_icon "star" %} Submit
+  </button>
+  {% endbuttons %}
+  </form>
+<script>
+    window.addEventListener('load', function() {
+        $("#id_phone").attr('type', 'number');
+    });
+</script>
+{% endblock %}

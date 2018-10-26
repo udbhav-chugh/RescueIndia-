@@ -1,0 +1,82 @@
+{% spaceless %}
+{% load static %}
+{% load bootstrap3 %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Help at Hand</title>
+
+  {# <link rel="shortcut icon" type="image/png" href="{% static 'images/helpathand.jpg' %}"/> #}
+
+  {% block css %}
+  {% endblock %}
+
+  {% bootstrap_css %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+  <link rel="shortcut icon" href="{% static 'images/helpathand.jpg' %}" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css">
+
+
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+
+ {% block body %}
+
+<nav class="navbar">
+    
+    <div id="vakul">
+    
+    <div class="col-sm-4 col-xs-4 text-cenrter">
+    {% if not request.path == '/' %}
+        <a class="brand-logo" href="/">HOME</a>
+    {% endif %}
+    </div>
+      <a href="https://ndma.gov.in/en/">
+      <img src="{% static 'images/ndma.png' %}" class="nav-logo" style="float: right; position: relative; z-index: 2; margin-top:0px; margin-right: 1px;">
+      </a>
+      <a href="http://www.iitg.ac.in/"><img src="{% static 'images/LOGO1.png' %}" class="nav-logo" style="float: right;position: relative; z-index: 2; margin-right: 6px; margin-top: 0px;"></a>
+            <a href="https://azure.microsoft.com/en-in/free/search/?&OCID=AID719810_SEM_sGGkJsLn&lnkd=Google_Azure_Brand&dclid=CL_03YrYkN4CFV1zjgodgscJCQ"><img src="{% static 'images/azure.png' %}" class="nav-logo" style="float: right;position: relative; z-index: 2; margin-right: 6px; margin-top: 0px;"></a>
+
+    <!-- </div> -->
+    <div id="utkarshjain1508">
+     <div id="google_translate_element"></div><script type="text/javascript">
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL, multilanguagePage: true}, 'google_translate_element');
+  }
+  </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </div>
+    </div>
+</nav>
+<div class="container">
+
+
+
+
+{% block content %}
+{% endblock %}
+
+</div>
+
+{% endblock %}
+
+<footer class="footer">
+<div class="container text-center">
+<a href="{%url 'disclaimer' %}" style="font-weight:bold">Disclaimer</a>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{% bootstrap_javascript %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"></script>
+{% block javascript %}
+{% endblock %}
+
+
+</body>
+
+</html>
+{% endspaceless %}

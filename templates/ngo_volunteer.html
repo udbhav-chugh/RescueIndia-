@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% load bootstrap3 %}
+
+<div class="container text-center">
+    <h1 class="main-logo">HELP<span style="font-weight: normal;"> at </span>HAND</h1>
+    <br/>
+    <h2 class="main-logo">VISION</h2>
+    <p style="margin-bottom:20px; color:white; font-size: 300%;"  >
+        <i>An initiative by students of IIT Guwahati</i><br>
+        To bring together public, government authorities, and volunteers<br/>to prepare better for upcoming disasters and effectively help the sufferers.<br/>
+  </p>
+
+    <a href="{%url 'registerview' %}" class="home-button card" role="button">
+    {% bootstrap_icon "user" %}
+    <span class="text">
+        Register as<br/>a volunteer
+    </span>
+    </a>
+    <a href="{%url 'volunteerdata' %}" class="home-button card" role="button">
+        {% bootstrap_icon "list" %}
+        <span class="text">
+            View Registered<br/> Volunteers
+            <span class="ml small"></span>
+        </span>
+    </a> 
+    <a href="{%url 'ngoregisterview' %}" class="home-button card" role="button">
+        {% bootstrap_icon "list-alt" %}
+        <span class="text">
+            Register as<br/> NGO/Company
+        </span>
+    </a>
+    <a href="{%url 'ngoview' %}" class="home-button card" role="button">
+        {% bootstrap_icon "list" %}
+        <span class="text">
+            View Registered<br/> NGO's/Company's
+            <span class="ml small"></span>
+        </span>
+    </a>
+</div>
+{% endblock %}

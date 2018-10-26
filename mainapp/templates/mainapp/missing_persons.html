@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block body_class %}container-fixed{% endblock %}
+{% block content %}
+
+
+<h3 class="text-center">
+   Report Missing people<br />
+</h3>
+
+<div>
+
+    <p>This is a crowdsourced website that aims to track all the persons missing. Add as much information as possible so that volunteers can help search for your loved ones in the relief camps. Once you enter the details we will do the below: </p>
+
+    <ol>
+        <li>The missing person details will be shown on our website prominently
+        <li>The details may be shared on Facebook and other social media to help track people
+        <li>The volunteers on ground may post the missing person details on walls or on prominent places within the relief camps
+    </ol>
+
+</div>
+
+<div class="text-center">
+    <iframe width="100%" height="1200" allow="geolocation" style="max-width:800px;" src="https://docs.google.com/forms/d/e/1FAIpQLScsEUyGf2Dj-gVpNWiL5SeHBrPQ2AN7i-dVyWrgSzL1n3ZiXw/viewform?embedded=true" frameborder="0" allowfullscreen></iframe>
+</div>
+{% endblock %}

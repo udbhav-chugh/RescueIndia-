@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+
+
+<h3 class="text-center">
+  Report Missing Persons And Finding Persons.
+</h3>
+<h6 class="text-center">
+Kindly use search person facility before reporting a missing case.
+</h6>
+
+<div class="container text-center">
+    <a href="{%url 'find_people' %}" class="home-button card" role="button">
+        {% bootstrap_icon "user" %}
+        <span class="text text-center">
+            Person Finder <br> (Not functional)
+            <span class="ml small"></span>
+        </span>
+    </a>
+    <a href="{%url 'missing_persons' %}" class="home-button card" role="button">
+        {% bootstrap_icon "user" %}
+        <span class="text text-center">
+            Missing Persons<br/>
+            <span class="ml small"></span>
+        </span>
+    </a>    
+</div>
+
+
+{% endblock %}
