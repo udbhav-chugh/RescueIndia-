@@ -1,3 +1,0 @@
-CREATE DATABASE test;
-CREATE USER helpinghand WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON DATABASE rescuekerala TO rescueuser;
